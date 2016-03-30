@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Menu Principal"
+        android:id="@+id/TituloMain"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tareas"
+        android:id="@+id/BtnTareas"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/TituloMain"
+        android:layout_alignLeft="@+id/TituloMain"
+        android:layout_alignStart="@+id/TituloMain"
+        android:onClick="toTareas"
+        android:nestedScrollingEnabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eventos"
+        android:id="@+id/BtnEventos"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/BtnTareas"
+        android:layout_alignStart="@+id/BtnTareas"
+        android:onClick="toEventos"
+        android:nestedScrollingEnabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notas"
+        android:id="@+id/BtnNotas"
+        android:layout_below="@+id/BtnEventos"
+        android:layout_alignLeft="@+id/BtnEventos"
+        android:layout_alignStart="@+id/BtnEventos"
+        android:layout_marginTop="43dp"
+        android:onClick="toNotas" />
+</RelativeLayout>

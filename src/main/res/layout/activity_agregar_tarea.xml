@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.casta.agenda.AgregarTarea">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Titulo"
+        android:id="@+id/tvTitulo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/tbTitulo"
+        android:layout_below="@+id/tvTitulo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Comentario"
+        android:id="@+id/tvComentario"
+        android:layout_below="@+id/tbTitulo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/tbComentario"
+        android:layout_below="@+id/tvComentario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fecha   "
+        android:id="@+id/tvFecha"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvTitulo"
+        android:layout_toEndOf="@+id/tvTitulo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hora     "
+        android:id="@+id/tvHora"
+        android:layout_above="@+id/tbFecha"
+        android:layout_alignRight="@+id/tbComentario"
+        android:layout_alignEnd="@+id/tbComentario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tbFecha"
+        android:layout_below="@+id/tvFecha"
+        android:layout_alignLeft="@+id/tvFecha"
+        android:layout_alignStart="@+id/tvFecha"
+        android:layout_toStartOf="@+id/tbHora"
+        android:layout_alignRight="@+id/tvFecha"
+        android:layout_alignEnd="@+id/tvFecha" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/tbHora"
+        android:layout_alignBottom="@+id/tbFecha"
+        android:layout_alignLeft="@+id/tvHora"
+        android:layout_alignStart="@+id/tvHora"
+        android:layout_alignRight="@+id/tvHora"
+        android:layout_alignEnd="@+id/tvHora" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:id="@+id/BtnGuardar"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="Guardar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:id="@+id/BtnCancelar"
+        android:layout_alignTop="@+id/BtnGuardar"
+        android:layout_toRightOf="@+id/BtnGuardar"
+        android:layout_toEndOf="@+id/BtnGuardar" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/tbFecha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activado"
+            android:id="@+id/radioButton"
+            android:layout_below="@+id/tbFecha"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desactivdo"
+            android:id="@+id/radioButton2"
+            android:layout_above="@+id/BtnGuardar"
+            android:layout_centerHorizontal="true"
+            android:checked="false" />
+    </RadioGroup>
+
+</RelativeLayout>
